@@ -5,7 +5,7 @@ import vOnFocus from './directives/onFocus';
 import './styles/common.css';
 import type { Person } from './types';
 import { createPinia } from 'pinia';
-import { useMainStore } from './store';
+import { useNationalityStore } from './store/useNationalityStore';
 
 const pinia = createPinia();
 
@@ -18,4 +18,4 @@ export default {
   }
 };
 
-export { ShowNationality, CatFact, vOnFocus, Person, useMainStore };
+export { ShowNationality, CatFact, vOnFocus, Person, useNationalityStore };
