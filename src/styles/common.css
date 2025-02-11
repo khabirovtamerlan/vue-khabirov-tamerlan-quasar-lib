@@ -1,0 +1,17 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 6px rgba(black, 0.1);
+}
+
+.flex-container {
+  gap: 16px;
+  display: flex;
+}
+
+.flex-container > * {
+  flex: 1;
+}
