@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import dts from 'vite-plugin-dts';
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
 
 export default defineConfig({
@@ -7,7 +8,14 @@ export default defineConfig({
     vue({
       template: { transformAssetUrls }
     }),
-    quasar()
+    quasar(),
+    dts({
+      insertTypesEntry: true,
+      outputDir: 'dist',
+      cleanVueFileName: true,
+      skipDiagnostics: false,
+      rollupTypes: true
+    })
   ],
   build: {
     lib: {
