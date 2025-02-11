@@ -24,11 +24,12 @@ export default defineConfig({
       fileName: (format) => `vue-khabirov-tamerlan-quasar-lib.${format}.js`
     },
     rollupOptions: {
-      external: ['vue', 'quasar'],
+      external: ['vue', 'quasar', 'pinia'],
       output: {
         globals: {
           vue: 'Vue',
-          quasar: 'Quasar'
+          quasar: 'Quasar',
+          pinia: 'Pinia'
         }
       }
     }

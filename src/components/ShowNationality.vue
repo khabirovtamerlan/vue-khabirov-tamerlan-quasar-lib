@@ -19,12 +19,15 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useMainStore } from '../store';
+
+const store = useMainStore();
+const nationality = ref(store.nationality);
 const name = ref('');
-const nationality = ref('');
 
 const fetchNationality = async () => {
   const response = await fetch(`https://api.nationalize.io/?name=${name.value}`);
   const data = await response.json();
-  nationality.value = data.country.length ? data.country[0].country_id : 'Unknown';
+  store.setNationality(data.country.length ? data.country[0].country_id : 'Unknown')
 };
 </script>
