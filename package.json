@@ -7,7 +7,7 @@
   "style": "dist/vue-khabirov-tamerlan-quasar-lib.css",
   "files": ["dist", "src"],
   "scripts": {
-    "build": "vite build",
+    "build": "tsc & vite build",
     "prepare": "npm run build"
   },
   "peerDependencies": {
